@@ -14,18 +14,17 @@
 .imgSlide{
   width:1350px;
   height:470px;
-  /* width: 100%;
-  height: auto; */
 }
 .next {
   margin-top: 0px;
   cursor: pointer;
-  /* position: relative; */
 }
 .back {
   margin-top: 0px;
   cursor: pointer;
 }
+
+/* for small devices */
 @media screen and (max-width:600px) {
   .imgSlide{
     width:575px;

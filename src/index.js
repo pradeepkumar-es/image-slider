@@ -4,8 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+
+//grabing the div element having root id and storing it to root variable
+const root = ReactDOM.createRoot(document.getElementById('root')); 
+
+// rendering the App to display it in div element having id = root in index.html file
+root.render(   
   <React.StrictMode>
     <App />
   </React.StrictMode>

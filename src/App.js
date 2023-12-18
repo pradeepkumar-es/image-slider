@@ -1,13 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header';
 import ImageSlider from './Components/ImageSlider'
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <ImageSlider/>
+    <div className="App"> 
+      <Header />  {/*added App components to display in browser*/}
+      <ImageSlider/>  
     </div>
   );
 }
