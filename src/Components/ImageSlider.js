@@ -8,10 +8,12 @@ export default function ImageSlider () {
     const images = [img1,img2,img3,img4,img5]
     const [imageIndex, setImageIndex] = React.useState(0)
     function goToBack(){
-        setImageIndex((imageIndex-1+images.length)%images.length)
+        const currentIndex= (imageIndex-1+images.length)%images.length;
+        setImageIndex(currentIndex)
     }
     function goToNext(){
-       setImageIndex((imageIndex+1)%images.length)
+        const currentIndex=(imageIndex+1)%images.length;
+       setImageIndex(currentIndex)
     }
     React.useEffect(()=>{
         const Interval = setInterval(goToNext, 3000)
@@ -20,9 +22,22 @@ export default function ImageSlider () {
     )
     return (
         <div className="image-slider">
-            <button onClick={goToBack} >Previous</button>
-            <img src={images[imageIndex]} className="imgSlide" alt=""/> 
-            <button onClick={goToNext}>Next</button>
+            <div className="images">
+            <button className="back" onClick={goToBack} >&lt;</button>
+            <img src={images[imageIndex]} className="imgSlide" alt="image slide"/> 
+            <button className="next" onClick={goToNext}>&gt;</button>
+            </div>
+            <div className="dot-feedback">
+                {
+                    images.map((image, newIndex)=>(
+                        <span 
+                        key={newIndex}
+                        className={newIndex === imageIndex?'activedot':'blankDot'}
+                        onClick={goToNext}
+                        ></span>
+                    ))
+                }
+            </div>
         </div>
     )
 }
