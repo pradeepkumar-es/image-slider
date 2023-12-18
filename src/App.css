@@ -43,7 +43,7 @@
 .dot-feedback{
   display: flex;
   justify-content: center;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 .blankDot{
   height: 10px;
